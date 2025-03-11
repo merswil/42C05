@@ -6,14 +6,14 @@ int	ft_iterative_factorial(int nb)
 
 	a = 1;
 	i = 1;
-	if (nb >= 0)
+	if (nb < 0)
 	{
-		while (i <= nb)
-		{
-			a = a * i;
-			i++;
-		}
-		return (a);
+		return (0);
 	}
-	return (0);
+	while (i <= nb)
+	{
+		a = a * i;
+		i++;
+	}
+	return (a);
 }
